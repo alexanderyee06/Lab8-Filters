@@ -40,6 +40,7 @@ public class LoginServlet extends HttpServlet {
         }
         
         HttpSession session = request.getSession();
+        session.setAttribute("user", user);
         session.setAttribute("email", email);
         
         if (user.getRole().getRoleId() == 1) {
